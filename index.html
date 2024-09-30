@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <img src="student-left.jpg" class="logo logo-left" alt="Student Logo Left">
+        <h1>Student Registration Form</h1>
+        <img src="Student-right.jpg" class="logo logo-right" alt="Student Logo Right">
+    </header>
+    
+    
+
+    <div class="container">
+        <!-- Form Section -->
+        <div class="form-section">
+            <h2>Enter Student Details</h2>
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="rollNo">Roll No:</label>
+                    <input type="text" id="rollNo" name="rollNo" required placeholder="Enter your roll number">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required placeholder="Enter your subject">
+                </div>
+                <div class="form-group">
+                    <label for="storageOption">Storage Option:</label>
+                    <select id="storageOption" name="storageOption">
+                        <option value="localStorage">Local Storage</option>
+                        <option value="cookies">Cookies</option>
+                    </select>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- Table Section -->
+        <div class="table-section">
+            <h2>Registered Students</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Name</th>
+                            <th>Roll No</th>
+                            <th>Subject</th>
+                            <th>Storage Option</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentsList">
+                        <tr>
+                            <td colspan="7">No students registered yet.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

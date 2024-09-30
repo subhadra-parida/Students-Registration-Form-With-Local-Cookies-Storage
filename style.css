@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5; /* Light background color */
+}
+
+/* Container Flexbox Styling */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+/* Add space between form and table */
+.form-section {
+    flex: 1 1 35%; /* Adjust size */
+    background-color: #6a1b9a; /* Form background color */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    color: white;
+    margin-right: 20px; /* Add space between form and table */
+}
+
+.table-section {
+    flex: 1 1 60%; /* Adjust size */
+    background-color: #fafafa;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Header styling */
+.main-header {
+    position: relative; /* Ensure the header is a reference for absolute positioning */
+    background-color: #6a1b9a;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.main-header h1 {
+    font-size: 1.8em;
+    margin: 0;
+    text-align: center;
+    position: relative; /* Allows the title to stay centered */
+}
+
+/* Image styling */
+.logo {
+    position: absolute;
+    width: 50px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the images */
+}
+
+.logo-left {
+    left: 10px; /* Position near the left edge */
+}
+
+.logo-right {
+    right: 10px; /* Position near the right edge */
+}
+
+/* Form Section */
+.form-section h2 {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    color: #333;
+    background-color: #f3e5f5;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    background-color: #d1c4e9;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #eaddec;
+}
+
+/* Table Section */
+.table-section h2 {
+    text-align: center;
+    color: #6a1b9a;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Table Styling */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+table th {
+    background-color: #6a1b9a;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table tbody tr:hover {
+    background-color: #f3e5f5;
+}
+
+table tbody td {
+    color: #333;
+}
+
+/* Edit and Delete Buttons */
+table tbody td button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+table tbody td button.edit-btn {
+    background-color: #4caf50; /* Green for edit */
+}
+
+table tbody td button.edit-btn:hover {
+    background-color: #388e3c;
+}
+
+table tbody td button.delete-btn {
+    background-color: #f44336; /* Red for delete */
+}
+
+table tbody td button.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+        padding: 10px; /* Added padding for better spacing */
+    }
+
+    .form-section, .table-section {
+        width: 100%;
+        margin-right: 0; /* Remove right margin for full width */
+        margin-bottom: 20px; /* Add space between sections */
+    }
+
+    .form-section {
+        margin-bottom: 0; /* Remove extra space for mobile */
+    }
+
+    table th, table td {
+        font-size: 14px;
+    }
+    
+    /* Logo resizing for mobile */
+    .logo {
+        width: 40px; /* Slightly smaller logo on mobile */
+    }
+    
+    /* Header font size adjustment */
+    .main-header h1 {
+        font-size: 1.5em; /* Smaller header on mobile */
+    }
+}
